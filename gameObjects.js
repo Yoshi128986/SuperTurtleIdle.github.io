@@ -17,33 +17,33 @@ const spIcon = '<img src="img/src/icons/spellpower.jpg">';
 const strIcon = '<img src="img/src/icons/strength.jpg">';
 
 
-const collectibleChance1 = 1000;
-const collectibleChance2 = 7000;
-const collectibleChance3 = 30000;
+const collectibleChance1 = 1000000000;
+const collectibleChance2 = 7000000000;
+const collectibleChance3 = 30000000000;
 
 let plantCompletionProgress = 0
 let plantCompletionProgressTotal = 0
 
-let uncommonDrop = 5000
-let rareDrop = 15000
-let epicDrop = 45000
-let mythicDrop = 450000
+let uncommonDrop = 500000000000
+let rareDrop = 150000000000
+let epicDrop = 450000000000
+let mythicDrop = 45000000000000
 
-let uncommonChest = 30
-let rareChest = 90
-let epicChest = 270
-let mythicChest = 2777
+let uncommonChest = 3000000000000
+let rareChest = 9000000000000000
+let epicChest = 27000000000000000
+let mythicChest = 2777000000000
 
-let uncommonDungeon = 30
-let rareDungeon = 50
-let epicDungeon = 90
-let mythicDungeon = 170
+let uncommonDungeon = 3000000000000
+let rareDungeon = 50000000000
+let epicDungeon = 90000000000
+let mythicDungeon = 170000000000
 
-let commonThief = 3
-let uncommonThief = 10
-let rareThief = 20
-let epicThief = 60
-let mythicThief = 70
+let commonThief = 3000000000
+let uncommonThief = 10000000000
+let rareThief = 200000000000
+let epicThief = 60000000000
+let mythicThief = 700000000000
 
 function returnQualityColor(quality){
 
@@ -243,7 +243,7 @@ function beautify(number) {
   };
 
 function rng(min, max) { //gives a random number between the two
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 2)) + min;
 }
 
 function rngW(min, max, weight) {
@@ -921,7 +921,7 @@ enemies.E1.area = 'A1';
 enemies.E1.attack = 3;
 enemies.E1.difficulty = 'easy';
 enemies.E1.exp = returnExp(1)/200;
-enemies.E1.drop = "dropItem('I1'); rareItemDrop('I464',64000);";
+enemies.E1.drop = "dropItem('I1'); rareItemDrop('I464',640000000000000);";
 enemies.E1.align = 'nature';
 enemies.E1.bestiaryItem = 'bestiaryItem("I1", "drop")+bestiaryItem("I464", "drop", 64000)';
 
@@ -1163,7 +1163,7 @@ enemies.E11.attack = 9000;
 enemies.E11.exp = returnExp(27)/1800;
 enemies.E11.difficulty = 'hard';
 enemies.E11.align = 'elemental';
-enemies.E11.drop =  "dropItem('I17');rareItemDrop('I468',64000);";
+enemies.E11.drop =  "dropItem('I17');rareItemDrop('I468',6400000000000000);";
 enemies.E11.bestiaryItem = 'bestiaryItem("I17","drop")+bestiaryItem("I468","drop",64000)'
 
 enemies.E19 = {};
@@ -1189,7 +1189,7 @@ enemies.E22.attack = 50000;
 enemies.E22.exp = 0;
 enemies.E22.drop =  "rareItemDrop('I310', 1)";
 enemies.E22.difficulty = 'easy'; 
-enemies.E22.defenseChance = 'if (items[rpgPlayer.weaponSlot].tag==="rod" && rng(1,3)===1) rareItemDrop("I344", 1);'
+enemies.E22.defenseChance = 'if (items[rpgPlayer.weaponSlot].tag==="rod" && rng(1,10000000000)===1) rareItemDrop("I344", 1);'
 enemies.E22.align = 'nature';
 enemies.E22.bestiaryItem = 'bestiaryItem("I310","drop",1)';
 enemies.E22.tag = 'dungeonEnemy';
@@ -1324,9 +1324,9 @@ enemies.E30.attackChance = 'playSound("audio/creatura2.mp3");';
 enemies.E30.ignoreBestiaryPercentage = true;
 enemies.E30.noMedal = true;
 
-var fishingJunk = { I88:{P:35, A:1}, I89:{P:35, A:1}, I158:{P:35, A:1} , I216:{P:50000, A:1} /*golden trash*/ }
-var fishingEeriePond1 = { I161:{P:10, A:1}, /*skelefish*/ I160:{P:50, A:1}, /*devilfish*/  I159:{P:200, A:1}, /*jellyfish*/}
-var fishingEeriePond2 = { I169:{P:epicDrop/4, A:1}, /*the catch*/ I286:{P:30, A:1}, /*quest*/}
+var fishingJunk = { I88:{P:350000000, A:1}, I89:{P:35000000000, A:1}, I158:{P:350000000000, A:1} , I216:{P:50000000000000, A:1} /*golden trash*/ }
+var fishingEeriePond1 = { I161:{P:100000000000, A:1}, /*skelefish*/ I160:{P:500000000000, A:1}, /*devilfish*/  I159:{P:2000000000000, A:1}, /*jellyfish*/}
+var fishingEeriePond2 = { I169:{P:epicDrop/4, A:1}, /*the catch*/ I286:{P:300000000000, A:1}, /*quest*/}
 
 enemies.E20 = {};
 enemies.E20.name = 'Eerie Pond';
@@ -1365,7 +1365,7 @@ enemies.E25.description = 'A terrible mutation manifested by the evil deeds of p
 enemies.E25.attack = 500000;
 enemies.E25.exp = 0;
 enemies.E25.align = 'occult';
-enemies.E25.drop =  'rareItemDrop("I23",rareDungeon)+rareItemDrop("I467", 60)+rareItemDrop("I39",1, 10)'
+enemies.E25.drop =  'rareItemDrop("I23",rareDungeon)+rareItemDrop("I467", 600000000000)+rareItemDrop("I39",1, 10)'
 enemies.E25.tag = "stageBoss1";
 enemies.E25.attackChance = 'castMalvarrel()';
 enemies.E25.bigEnemy = true;
@@ -1430,7 +1430,7 @@ enemies.E34.area = 'A8';
 enemies.E34.attack = 27000000;
 enemies.E34.difficulty = 'medium';
 enemies.E34.exp = returnExp(44)/1800;
-enemies.E34.drop =  "dropItem('I347'); rareItemDrop('I471',64000);";
+enemies.E34.drop =  "dropItem('I347'); rareItemDrop('I471',6400000000000);";
 enemies.E34.align = 'nature';
 enemies.E34.defenseChance = 'if (["mattock"].includes(items[rpgPlayer.weaponSlot].tag) && playerGatheringLevel>3) { rareItemDrop("I398",1)  }';
 enemies.E34.bestiaryItem = 'bestiaryItem("I347","drop")+bestiaryItem("I471","drop",64000)+colorTag("⛏️4","#446262")+bestiaryItem("I398","drop")';
@@ -1548,7 +1548,7 @@ enemies.E49.description = 'A dark entity transported from a realm without turtle
 enemies.E49.attack = 16000000000;
 enemies.E49.exp = 0;
 enemies.E49.align = 'occult';
-enemies.E49.drop =  "rareItemDrop('I325',mythicDungeon); rareItemDrop('I313',1, 10); rareItemDrop('I470',60); sendMail('MF7'); shopItems.A9S7.unlocked = true; shopItems.A9S8.unlocked = true; shopItems.A9S9.unlocked = true; shopItems.A9S10.unlocked = true; shopItems.A9S11.unlocked = true;"; // shopItems.A8S18.unlocked = true;
+enemies.E49.drop =  "rareItemDrop('I325',mythicDungeon); rareItemDrop('I313',1, 10); rareItemDrop('I470',6000000000000); sendMail('MF7'); shopItems.A9S7.unlocked = true; shopItems.A9S8.unlocked = true; shopItems.A9S9.unlocked = true; shopItems.A9S10.unlocked = true; shopItems.A9S11.unlocked = true;"; // shopItems.A8S18.unlocked = true;
 enemies.E49.tag = "finalBoss";
 enemies.E49.attackChance = 'castYogKulth()';
 enemies.E49.bigEnemy = true;
@@ -2571,16 +2571,16 @@ items.I190.max = 1;
 items.I190.use = 'if (stats.currentEnemy==="E18") {deleteEnemy("E30"); animParticleBurst(10 , "particleFire", "enemyPanel", 200); animParticleBurst(10 , "particleSpark", "enemyPanel", 200); animImageSplash("soundWave", "enemyPanel", "wave", 200); animState(stats.currentEnemy+"enemy", "shakeFlash 0.4s 1"); playSound("audio/creatura1.mp3"); playSound("audio/creatura2.mp3"); logs.P54.unlocked=true; items.I190.count--}'; 
 items.I190.align = "occult";
 
-var stampArray = { I91:{P:2,A:1}, I92:{P:20,A:1}, I93:{P:60,A:1} }
+var stampArray = { I91:{P:20000000000,A:1}, I92:{P:2000000000000,A:1}, I93:{P:6000000000000,A:1} }
 
-var smallCache =  { I385:{P:mythicChest,A:1}, /*alienhead*/ I22:{P:1,A:"rng(1,5)"}, /*nephrite*/ I42:{P:5,A:1}, /*malachite*/  I12:{P:1,A:"rng(1,3)"}, /*lizard*/ I33:{P:25,A:1}, /*blade*/ I131:{P:25,A:1}, /*thorn ring*/ I112:{P:1,A:'rng(1,5)'}, /*boomerang*/}
+var smallCache =  { I385:{P:mythicChest,A:1}, /*alienhead*/ I22:{P:1,A:"rng(1,5)"}, /*nephrite*/ I42:{P:500000000000,A:1}, /*malachite*/  I12:{P:1,A:"rng(1,3)"}, /*lizard*/ I33:{P:2500000000000,A:1}, /*blade*/ I131:{P:25000000000000,A:1}, /*thorn ring*/ I112:{P:1,A:'rng(1,5)'}, /*boomerang*/}
 items.I10 = {};
 items.I10.name = 'Small Wooden Lockbox';
 items.I10.description = `'Consumable - Container<br><FONT COLOR="#1EFF0C">Use: Unlock with a'+itemIcon("I41")+'Copper Key to open<FONT COLOR="#edd585"><br>'+bestiaryTag("🎲 Possible Contents 🎲", "#815C42")+bestiaryItem("I385","container",mythicChest)+bestiaryItem("I33","container",uncommonChest)+bestiaryItem("I131","container",uncommonChest)+bestiaryItem("I42","container",5)+bestiaryItem("I12","container",1)+bestiaryItem("I22","container",1)+bestiaryItem("I112","container",1)`
 items.I10.flavor = '"Life is like a Small Wooden Lockbox."';
 items.I10.quality = 'Uncommon';
 items.I10.sell = 2000;
-items.I10.use = 'if (items.I41.count>0){ items.I41.count--; rollTable(smallCache, 1); rollTable(stampArray, 1); items.I10.count--; if(quests.A2Q2.state === "pending"){ if(rng(1,6)===1) items.I123.count++ }; }';
+items.I10.use = 'if (items.I41.count>0){ items.I41.count--; rollTable(smallCache, 1); rollTable(stampArray, 1); items.I10.count--; if(quests.A2Q2.state === "pending"){ if(rng(1,60000000000)===1) items.I123.count++ }; }';
 items.I10.autoOpenLocked = "I41"; 
 items.I10.dynamic = true; 
 
@@ -2591,7 +2591,7 @@ items.I41.flavor = '"For the easily-influenced locks."';
 items.I41.quality = 'Common';
 items.I41.sell = 'artisanBonus("EK1")';
 
-var reinforcedChest = { I384:{P:mythicChest,A:1}, /*grandad*/ I42:{P:2,A:1}, /*malachite*/ I418:{P:10,A:1}, /*shadowdiamond*/ I81:{P:rareChest,A:1}, /*sacdagger*/  I62:{P:rareChest,A:1}, /*heartcard*/}
+var reinforcedChest = { I384:{P:mythicChest,A:1}, /*grandad*/ I42:{P:20000000000,A:1}, /*malachite*/ I418:{P:10000000000,A:1}, /*shadowdiamond*/ I81:{P:rareChest,A:1}, /*sacdagger*/  I62:{P:rareChest,A:1}, /*heartcard*/}
 items.I43 = {};
 items.I43.name = 'Reinforced Wooden Chest';
 items.I43.description = `'Consumable - Container<br><FONT COLOR="#1EFF0C">Use: Unlock with an'+itemIcon("I46")+'Arcanite Blasting Charge to open<FONT COLOR="#edd585"><br>'+bestiaryTag("🎲 Possible Contents 🎲", "#815C42")+bestiaryItem("I384","container",mythicChest)+bestiaryItem("I81","container",rareChest)+bestiaryItem("I62","container",rareChest)+bestiaryItem("I418","container",10)+bestiaryItem("I42","container",2)`
@@ -2609,7 +2609,7 @@ items.I46.flavor = '"For the moderately-swayed locks."';
 items.I46.quality = 'Common';
 items.I46.sell = 'artisanBonus("EK2")';
 
-var runicCache =  { I42:{P:2,A:1}, /*shadowdiamond*/ I359:{P:10,A:1}, /*citrokine*/  I373:{P:rareChest,A:1}, /*ring*/ I360:{P:rareChest,A:1}, /*pjs*/  I328:{P:mythicChest,A:1}, /*brass dooter*/}
+var runicCache =  { I42:{P:20000000000,A:1}, /*shadowdiamond*/ I359:{P:10000000000,A:1}, /*citrokine*/  I373:{P:rareChest,A:1}, /*ring*/ I360:{P:rareChest,A:1}, /*pjs*/  I328:{P:mythicChest,A:1}, /*brass dooter*/}
 items.I399 = {};
 items.I399.name = 'Silver Runic Cache';
 items.I399.description = `'Consumable - Container<br><FONT COLOR="#1EFF0C">Use: Unlock with a'+itemIcon("I400")+'Verdant Key to open<FONT COLOR="#edd585"><br>'+bestiaryTag("🎲 Possible Contents 🎲", "#815C42")+bestiaryItem("I328","container",mythicChest)+bestiaryItem("I373","container",rareChest)+bestiaryItem("I360","container",rareChest)+bestiaryItem("I359","container",10)+bestiaryItem("I42","container",2)`
@@ -2667,7 +2667,7 @@ items.I205.description = 'Consumable - Container<br><FONT COLOR="#1EFF0C">Use: O
 items.I205.flavor = '"If a toy happened to be inside, it would be healthier to eat than the food served."';
 items.I205.quality = 'Rare';
 items.I205.sell = 15000;
-items.I205.use = 'rareItemDrop(rareItems[rng(0,(rareItems.length-1))],1); rareItemDrop(rareItems2[rng(0,(rareItems2.length-1))],1); items.I205.count--; if (rng(1,15)===1) {items.I284.count++;}';
+items.I205.use = 'rareItemDrop(rareItems[rng(0,(rareItems.length-1))],1); rareItemDrop(rareItems2[rng(0,(rareItems2.length-1))],1); items.I205.count--; if (rng(1,150000000000)===1) {items.I284.count++;}';
 
 items.I433 = {}; 
 items.I433.name = 'Prison Realm Binding';
@@ -3046,7 +3046,7 @@ items.I39.description = 'Miscellaneous - Currency<br><FONT COLOR="#1EFF0C">Use: 
 items.I39.flavor = '"Fateful decisions upon the high seas await ye."';
 items.I39.quality = 'Uncommon';
 items.I39.sell = 900;
-items.I39.use = 'items.I39.cd = 3; playSound("audio/touchGlass.mp3"); animState("rpgPlayerImg", "gelatineHigh 0.3s 1"); items.I39.count--; if (rng(1,2)===1) {createPopup("&#127922; Tails", "#913c3c"); coinWins = 0;} else {createPopup("&#127922; Heads", "#61ba56"); coinWins++}; if (rng(1,50)===1) {playSound("audio/meow.mp3"); createPopup("&#127922; You feel lucky!", "#61ba56"); items.I193.count++; }';
+items.I39.use = 'items.I39.cd = 3; playSound("audio/touchGlass.mp3"); animState("rpgPlayerImg", "gelatineHigh 0.3s 1"); items.I39.count--; if (rng(1,1)===1) {createPopup("&#127922; Tails", "#913c3c"); coinWins = 0;} else {createPopup("&#127922; Heads", "#61ba56"); coinWins++}; if (rng(1,500000000000)===1) {playSound("audio/meow.mp3"); createPopup("&#127922; You feel lucky!", "#61ba56"); items.I193.count++; }';
 items.I39.cd = 0;
 
 items.I310 = {};
@@ -8285,7 +8285,7 @@ var materialTable2 = { I16:{P:0,A:'rng(20,40)*materialStage'}, I29:{P:0,A:'rng(2
 var materialStage = 1;
 
 
-var A1Loot = { I10:{P:200,A:1}, /*chest*/ I257:{P:100000,A:1}, I258:{P:100000,A:1} /*relics*/ ,M1:{P:100000,A:1} /*memo*/}
+var A1Loot = { I10:{P:2000000000,A:1}, /*chest*/ I257:{P:1000000000000,A:1}, I258:{P:1000000000000,A:1} /*relics*/ ,M1:{P:10000000000000,A:1} /*memo*/}
 areas.A1 = {};
 areas.A1.name = 'Cradle Hills';
 areas.A1.level = 1;
@@ -8298,7 +8298,7 @@ areas.A1.unlockedOre = 0;
 areas.A1.color1 = "#59662d";
 areas.A1.color2 = "#50473e";
 
-var A2Loot = { I10:{P:200,A:1}, /*chest*/ I259:{P:100000,A:1}, I260:{P:100000,A:1} /*relics*/ ,M2:{P:100000,A:1} /*memo*/}
+var A2Loot = { I10:{P:200000000000,A:1}, /*chest*/ I259:{P:1000000000000000,A:1}, I260:{P:100000000000,A:1} /*relics*/ ,M2:{P:100000000000,A:1} /*memo*/}
 areas.A2 = {};
 areas.A2.name = 'Lost Dojo';
 areas.A2.level = 10;
@@ -8309,7 +8309,7 @@ areas.A2.unlockedHerb = 0;
 areas.A2.color1 = "#485640";
 areas.A2.color2 = "#35443f";
 
-var A3Loot = { I43:{P:200,A:1}, /*chest*/ I261:{P:100000,A:1}, I262:{P:100000,A:1} /*relics*/ ,M3:{P:100000,A:1} /*memo*/}
+var A3Loot = { I43:{P:200000000000,A:1}, /*chest*/ I261:{P:100000000000,A:1}, I262:{P:100000000000,A:1} /*relics*/ ,M3:{P:100000000000,A:1} /*memo*/}
 areas.A3 = {};
 areas.A3.name = 'Granite Grotto';
 areas.A3.level = 20;
@@ -8328,7 +8328,7 @@ areas.A7.description = '"Welcoming all brave turtles, this thunderdome is a plac
 areas.A7.color1 = "#69584e";
 areas.A7.color2 = "#524238";
 
-var A4Loot = { I43:{P:200,A:1}, /*chest*/ I263:{P:100000,A:1}, I264:{P:100000,A:1} /*relics*/ }
+var A4Loot = { I43:{P:2000000000000,A:1}, /*chest*/ I263:{P:100000000000,A:1}, I264:{P:10000000000000,A:1} /*relics*/ }
 areas.A4 = {};
 areas.A4.name = 'Hallow Forest';
 areas.A4.level = 30;
@@ -8367,7 +8367,7 @@ areas.A6.color1 = "#3d3d3d";
 areas.A6.color2 = "#5c4440";
 areas.A6.charges = 3;
 
-var A8Loot = { I399:{P:200,A:1}, /*chest*/I380:{P:1000,A:1}, /*shroom*/ I413:{P:100000,A:1}, I414:{P:100000,A:1} /*relics*/ ,M4:{P:100000,A:1} /*memo*/}
+var A8Loot = { I399:{P:2000000000000,A:1}, /*chest*/I380:{P:100000000000,A:1}, /*shroom*/ I413:{P:100000000000,A:1}, I414:{P:100000000000,A:1} /*relics*/ ,M4:{P:1000000000000,A:1} /*memo*/}
 areas.A8 = {};
 areas.A8.name = 'Spirited Valley';
 areas.A8.level = 40;
@@ -8380,7 +8380,7 @@ areas.A8.color2 = "#38492f";
 areas.A8.areaEffect = true;
 areas.A8.mastery = 1200; //1000
 
-var A9Loot = { I399:{P:200,A:1}, /*chest*/ I415:{P:100000,A:1}, I416:{P:100000,A:1}, /*relics*/}
+var A9Loot = { I399:{P:2000000000000,A:1}, /*chest*/ I415:{P:100000000000,A:1}, I416:{P:1000000000000,A:1}, /*relics*/}
 areas.A9 = {};
 areas.A9.name = 'Ruined Laboratory';
 areas.A9.level = 50;
